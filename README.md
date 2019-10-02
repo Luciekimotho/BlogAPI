@@ -8,3 +8,7 @@ Using the following tutorials
 
 Deploying & sqlite to postgress
 ##### 3. https://medium.com/@BennettGarner/deploying-django-to-heroku-connecting-heroku-postgres-fcc960d290d1
+
+Blog - Django Rest Framework 
+
+##### 4. https://wsvincent.com/django-rest-framework-tutorial/

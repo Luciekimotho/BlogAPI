@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User, Group
-from blog.serializers import UserSerializer, GroupSerializer
+from .models import Blog
+from blog.serializers import UserSerializer, GroupSerializer, BlogSerializer
 from rest_framework import viewsets, generics
 
 
@@ -12,3 +13,11 @@ class ListUserView(generics.ListAPIView):
 class ListGroupView(generics.ListAPIView):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+class BlogList(generics.ListAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
+
+class BlogDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
